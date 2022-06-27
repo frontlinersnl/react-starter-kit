@@ -8,6 +8,7 @@
     "reduxjs",
     "SVGR",
     "tailwindcss",
+    "testid",
     "typeahead",
     "uncompiled"
   ],

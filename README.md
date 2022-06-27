@@ -31,6 +31,7 @@ Only the important files are shown
 .
 ├── .vscode # vscode setup (debug, snippets, etc)
 ├── config # tool configuration
+├── cypress # e2e tests
 ├── dist # production version
 ├── public # directory with public files (config, icons, etc)
 ├── scripts # Modified default create-react-app scripts

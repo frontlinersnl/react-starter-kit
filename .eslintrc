@@ -5,7 +5,13 @@
     "es6": true
   },
   "plugins": ["import"],
-  "extends": ["eslint:recommended", "prettier", "react-app", "react-app/jest"],
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "react-app",
+    "react-app/jest",
+    "plugin:cypress/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",

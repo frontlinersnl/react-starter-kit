@@ -1,6 +1,6 @@
 {
   "name": "react-starter-kit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A modern, create-react-app-based, starter kit for React projects",
   "keywords": [
     "react",
@@ -27,14 +27,17 @@
     "build": "node scripts/build.js",
     "lint": "eslint src/**",
     "organize-package-json": "npx format-package -w && npx sort-package-json",
+    "e2e": "cypress open -d --e2e",
+    "e2e-ci": "cypress run",
     "start": "node scripts/start.js",
     "test": "node scripts/test.js",
+    "test-ci": "node scripts/test.js --ci",
     "test-live-coverage": " concurrently --kill-others \"npm run test-with-coverage\" \"npx http-server -c-1 coverage/lcov-report\"",
     "test-with-coverage": "node scripts/test.js --coverage"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && lint-staged"
+      "pre-commit": "npm run lint && lint-staged && npm run test-ci && npm run e2e-ci"
     }
   },
   "lint-staged": {
@@ -73,11 +76,13 @@
     "concurrently": "^7.2.2",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.2.0",
+    "cypress": "^10.2.0",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-react": "^7.30.1",
     "eslint-watch": "^8.0.0",

@@ -66,3 +66,5 @@ bundle.zip
 #SonarCloud
 .scannerwork
 .angular/cache/
+
+cypress/videos
