@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Start and Debug chrome",
+      "configurations": ["Start", "attach chrome"]
+    },
+    {
+      "name": "Start and Debug firefox",
+      "configurations": ["Start", "attach firefox"]
+    }
+  ],
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "attach chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Start",
+      "request": "launch",
+      "runtimeArgs": ["run", "start"],
+      "runtimeExecutable": "npm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node"
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "attach firefox",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "enableCRAWorkaround": true,
+      "reAttach": true,
+      "reloadOnAttach": true
+    }
+  ]
+}

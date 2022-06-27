@@ -1,0 +1,11 @@
+*.d.ts
+main.browser.ts
+index.js
+node_modules/*
+*.e2e.*
+src/environments/*
+dist/**
+development/**
+deployment/**
+*.spec.ts
+*.css

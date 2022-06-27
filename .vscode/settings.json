@@ -1,0 +1,19 @@
+{
+  "cSpell.words": [
+    "browserslist",
+    "camelcase",
+    "flexbugs",
+    "Immer",
+    "pmmmwh",
+    "reduxjs",
+    "SVGR",
+    "tailwindcss",
+    "typeahead",
+    "uncompiled"
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "coverage": true,
+    "node_modules": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "Create Typed Functional Component": {
+    "prefix": ["rtfc", "rfc", "trfc", "react-typed-functional-component"],
+    "body": [
+      "import { FunctionComponent } from \"react\";",
+      "",
+      "type Props = {}",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: FunctionComponent<Props> = () => {",
+      "  return <h1>${1:${TM_FILENAME_BASE}}</h1>;",
+      "};",
+      ""
+    ],
+    "description": "Create a simple functional component"
+  },
+  "Create Typed Functional Component With Children": {
+    "prefix": ["rtfcc", "rfcc", "react-typed-functional-component-children"],
+    "body": [
+      "import { FunctionComponent, ReactNode } from \"react\";",
+      "",
+      "type Props = { children?: ReactNode };",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: FunctionComponent<Props> = ({ children }) => {",
+      "  return <>{children}</>;",
+      "};",
+      ""
+    ]
+  },
+  "Create Typed Functional Container": {
+    "prefix": ["rtfcontainer", "rtc", "redux-container"],
+    "body": [
+      "import { useAppDispatch, useAppSelector } from \"app/hooks\";",
+      "",
+      "export function ${1:${TM_FILENAME_BASE}}() {",
+      "  //const {} = useAppSelector(select${1:${TM_FILENAME_BASE}}State);",
+      "  const dispatch = useAppDispatch();",
+      "",
+      "  return (",
+      "    <div>",
+      "      <h1>${1:${TM_FILENAME_BASE}}</h1>",
+      "    </div>",
+      "  );",
+      "}",
+      ""
+    ]
+  },
+  "Create Empty Reducer Slice": {
+    "prefix": ["redux-slice", "rs", "ers"],
+    "body": [
+      "import { createSlice } from \"@reduxjs/toolkit\";",
+      "import { RootState } from \"app/store\";",
+      "",
+      "const initialState = {",
+      "  value: 0,",
+      "  status: \"idle\",",
+      "};",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}Slice = createSlice({",
+      "  name: \"${1:${TM_FILENAME_BASE}}\",",
+      "  initialState,",
+      "  reducers: {},",
+      "  extraReducers: (builder) => {},",
+      "});",
+      "",
+      "export const {} = ${1:${TM_FILENAME_BASE}}Slice.actions;",
+      "",
+      "export const select${1:${TM_FILENAME_BASE}}State = (state: RootState) => state.${1:${TM_FILENAME_BASE}};",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}Slice.reducer;"
+    ]
+  }
+}
