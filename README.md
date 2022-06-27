@@ -1,7 +1,8 @@
 # react-starter-kit
 
-Web project starter kit including modern tools and workflow based on
-[create-react-app](https://create-react-app.dev/), best practices from the community, a scalable base template and a good learning base.
+Web project starter kit including modern tools and workflows based on
+[create-react-app](https://create-react-app.dev/) and best practices from the community.
+Provides a scalable base template and a good learning base. Suitable for enterprise usage
 
 Includes:
 
@@ -9,6 +10,8 @@ Includes:
 - Vscode setup (debugging + snippets)
 - Jest, @testing-library and Cypress
 - Immer
+
+## Table of contents
 
 <!-- toc -->
 
