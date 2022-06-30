@@ -68,3 +68,4 @@ bundle.zip
 .angular/cache/
 
 cypress/videos
+cypress/screenshots

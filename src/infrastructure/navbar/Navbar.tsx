@@ -12,7 +12,7 @@ export const Navbar: FunctionComponent<Props> = () => {
       <nav data-testid="nav">
         <Link to="/" data-testid="nav.home">
           Home
-        </Link>{" "}
+        </Link>
         <Link to="/about" data-testid="nav.about">
           About
         </Link>
