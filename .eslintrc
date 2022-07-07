@@ -4,7 +4,7 @@
     "jest": true,
     "es6": true
   },
-  "plugins": ["import"],
+  "plugins": ["import", "cypress"],
   "extends": [
     "eslint:recommended",
     "prettier",
@@ -66,6 +66,14 @@
     "prefer-arrow/prefer-arrow-functions": "off",
     "prefer-const": "error",
     "radix": "off",
-    "space-in-parens": ["off", "never"]
+    "space-in-parens": ["off", "never"],
+    // cypress
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-force": "warn",
+    "cypress/no-async-tests": "error",
+    "cypress/no-pause": "error",
+    "cypress/require-data-selectors": 1
   }
 }
