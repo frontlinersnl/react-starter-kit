@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import styles from "./Counter.module.css";
 import { incrementAsync } from "./state/actions/incrementAsync";
@@ -15,12 +16,13 @@ export function CounterContainer() {
   const { value, status } = useAppSelector(selectCountAndStatus);
   const dispatch = useAppDispatch();
   const [incrementAmount, setIncrementAmount] = useState("2");
+  const [translate] = useTranslation();
 
   const incrementValue = Number(incrementAmount) || 0;
 
   return (
     <div>
-      Status: {status}
+      {translate("counter.status", { status })}
       <div className={styles.row}>
         <button
           className={styles.button}
@@ -49,7 +51,10 @@ export function CounterContainer() {
           className={styles.button}
           onClick={() => dispatch(incrementByAmount(incrementValue))}
         >
-          Add Amount
+          {/* Setting count allows you to pluralize / display different text based on the count
+              See: https://www.i18next.com/translation-function/plurals
+          */}
+          {translate("counter.add", { count: incrementValue })}
         </button>
         <button
           className={styles.asyncButton}
@@ -57,10 +62,7 @@ export function CounterContainer() {
         >
           Add Async
         </button>
-        <button
-          className={styles.button}
-          onClick={() => dispatch(incrementIfOdd(incrementValue))}
-        >
+        <button className={styles.button} onClick={() => dispatch(incrementIfOdd(incrementValue))}>
           Add If Odd
         </button>
       </div>

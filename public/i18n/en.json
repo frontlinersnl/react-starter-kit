@@ -1,0 +1,24 @@
+{
+  "common": {
+    "welcome": "Welcome!"
+  },
+  "navBar": {
+    "intro": "Our fancy header with navigation.",
+    "version": "App version:",
+    "currentDate": "Today's date: {{date, formattedDate}}"
+  },
+  "nav": {
+    "home": "home",
+    "about": "about",
+    "counter": "counter"
+  },
+  "about": {
+    "title": "About"
+  },
+  "counter": {
+    "status": "Working status: {{status}}",
+    "add_zero": "Please enter a value",
+    "add_one": "Add one",
+    "add_other": "Add {{count}}"
+  }
+}

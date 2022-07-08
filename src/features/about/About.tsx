@@ -1,7 +1,9 @@
 import { FunctionComponent } from "react";
+import { useTranslation } from "react-i18next";
 
 type Props = {};
 
 export const AboutContainer: FunctionComponent<Props> = () => {
-  return <h1>Welcome to the about page :)</h1>;
+  const [translate] = useTranslation();
+  return <h1>{translate("about.title")}</h1>;
 };
