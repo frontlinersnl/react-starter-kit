@@ -7,4 +7,10 @@ export default defineConfig({
     },
   },
   video: false,
+  reporter: "mocha-junit-reporter",
+  reporterOptions: {
+    testsuitesTitle: true,
+    mochaFile: "dist-tests/test-results/cypress/[hash].xml",
+    outputs: true,
+  },
 });

@@ -9,6 +9,6 @@ describe("Application navigation", () => {
 
   it("Should navigate to about when clicking on About", () => {
     cy.get('[data-testid="nav.about"]').click();
-    cy.contains("about");
+    cy.contains("About");
   });
 });

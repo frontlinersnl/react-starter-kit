@@ -4,6 +4,8 @@ import { Provider } from "react-redux";
 import App from "./App";
 import { store } from "./app/store";
 import "./index.css";
+import "./infrastructure/i18n/init";
+import { Loader } from "./infrastructure/wrappers/WithPageSuspense";
 import reportWebVitals from "./reportWebVitals";
 
 const container = document.getElementById("root")!;
@@ -12,7 +14,9 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Loader>
+        <App />
+      </Loader>
     </Provider>
   </React.StrictMode>,
 );

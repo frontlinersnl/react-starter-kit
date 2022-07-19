@@ -1,0 +1,24 @@
+{
+  "common": {
+    "welcome": "Welkom!"
+  },
+  "navBar": {
+    "intro": "Een fancy header met navigatie",
+    "version": "Aplicatie versie:",
+    "currentDate": "De datum van vandaag: {{date, formattedDate}}"
+  },
+  "nav": {
+    "home": "home",
+    "about": "over ons",
+    "counter": "teller"
+  },
+  "about": {
+    "title": "Over ons"
+  },
+  "counter": {
+    "status": "Staat van werking: {{status}}",
+    "add_zero": "Vul aub een waarde in",
+    "add_one": "+1",
+    "add_other": "Voeg {{count}} toe"
+  }
+}

@@ -69,3 +69,4 @@ bundle.zip
 
 cypress/videos
 cypress/screenshots
+dist-tests/**
