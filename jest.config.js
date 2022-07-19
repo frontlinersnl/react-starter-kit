@@ -3,6 +3,18 @@
 const config = {
   roots: ["<rootDir>/src"],
   collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}", "!src/**/*.d.ts"],
+  reporters: [
+    [
+      "jest-junit",
+      {
+        outputDirectory: "dist-tests/test-results/jest",
+        outputName: "jest.xml",
+        includeShortConsoleOutput: true,
+        classNameTemplate: "{classname}-{title}",
+        titleTemplate: "{classname}-{title}",
+      },
+    ],
+  ],
   setupFiles: ["react-app-polyfill/jsdom"],
   setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
   testMatch: [
