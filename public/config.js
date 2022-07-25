@@ -1,11 +1,13 @@
-const config = {
+const defaultConfig = {
   version: "0.1.0",
+  name: "React-starter-kit",
 };
 
+// ignore this :)
 try {
-  window.config = config;
+  window.defaultConfig = defaultConfig;
   if (module) {
-    module.exports = config;
+    module.exports = defaultConfig;
   }
 } catch {
   // ignore

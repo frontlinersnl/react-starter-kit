@@ -4,7 +4,7 @@
   },
   "navBar": {
     "intro": "Een fancy header met navigatie",
-    "version": "Aplicatie versie:",
+    "version": "versie:",
     "currentDate": "De datum van vandaag: {{date, formattedDate}}"
   },
   "nav": {
