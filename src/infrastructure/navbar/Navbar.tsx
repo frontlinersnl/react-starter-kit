@@ -2,7 +2,7 @@ import { DateTime } from "luxon";
 import { FunctionComponent } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Config } from "../../config";
+import { Config } from "../config";
 import "./Navbar.css";
 type Props = {};
 
