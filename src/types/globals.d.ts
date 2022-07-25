@@ -1,4 +1,4 @@
-import { RunTimeConfig } from "./../config/RunTimeConfig";
+import { RunTimeConfig } from "../infrastructure/config/RunTimeConfig";
 
 declare global {
   interface Window {
