@@ -30,7 +30,7 @@
     "e2e": "cypress open -d --e2e",
     "e2e-ci": "start-server-and-test start http://localhost:3000 cypress-run",
     "postinstall": "husky install",
-    "lint": "eslint src/**",
+    "lint": "GLOBIGNORE='src/types' && eslint src/**",
     "lint-staged": "lint-staged --relative",
     "organize-package-json": "npx format-package -w && npx sort-package-json",
     "pretty-quick": "pretty-quick --staged",
