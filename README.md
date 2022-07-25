@@ -18,6 +18,9 @@ Includes:
 - [Getting started](#getting-started)
 - [Project structure](#project-structure)
 - ["Forking" outside of Github](#forking-outside-of-github)
+- [Configuration](#configuration)
+  - [Using the `config.ts` file](#using-the-configts-file)
+  - [adding values](#adding-values)
 
 <!-- tocstop -->
 
@@ -37,7 +40,11 @@ Only the important files are shown
 ├── config # tool configuration
 ├── cypress # e2e tests
 ├── dist # production version
-├── public # directory with public files (config, icons, etc)
+├── public
+├── public # directory with public files (config, icons, etc), will be copied to dist
+│   ├── i18n # directory to house i18n language files
+│   ├── config.js # default runtime application config
+│   └── configOverride.js # default config overrides.
 ├── scripts # Modified default create-react-app scripts
 ├── src # application source
 │   ├── app # redux-toolkit hooks + store
@@ -60,3 +67,40 @@ Go into your existing repo and execute the following commands:
 3. `git push`
 
 Then, when you need to sync again you can repeat step 2 and 3
+
+## Configuration
+
+This starter kit comes with runtime configuration out-of-the-box.
+It achieves this with 2 config files in the public directory: `config.js` and `configOverrides.js`.
+`config.js` is meant to be filled with a default for all of your application's runtime configurations.
+`configOverrides.js` is meant to be replaced during deployment with environment specific runtime overrides.
+
+### Using the `config.ts` file
+
+To use the config you import `Config` from `config.ts` and use the typed object:
+
+```tsx
+import { Config } from "../config";
+
+import { FunctionComponent } from "react";
+
+export const Navbar: FunctionComponent<{}> = () => {
+  return <h1>{JSON.stringify(Config)}</h1>;
+};
+```
+
+### adding values
+
+To add a value to the runtime config you have to take 2 steps:
+
+1. Add a type to the `RuntimeConfig` type in [src/infrastructure/config/RunTimeConfig.ts](./src/infrastructure/config/RunTimeConfig.ts)
+
+   ```tsx
+   type RunTimeConfig = {
+     version: number;
+     name: string;
+     myNewKey: string;
+   };
+   ```
+
+2. Add a key (if required) to [public/config.js](./public/config.js)

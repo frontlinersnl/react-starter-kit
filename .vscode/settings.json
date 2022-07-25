@@ -2,11 +2,13 @@
   "cSpell.words": [
     "browserslist",
     "camelcase",
+    "deepmerge",
     "flexbugs",
     "Immer",
     "languagedetector",
     "luxon",
     "pmmmwh",
+    "preinstall",
     "reduxjs",
     "SVGR",
     "tailwindcss",

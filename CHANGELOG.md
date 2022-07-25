@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2022-07-25
+
+- Added the possibility to override partial configs during deployments
+- Added default output to jest (for terminal output...)
+- Upgraded npm packages. Left jest on 27 because of breaking changes in 28
+
 ## [0.3.2] - 2022-07-19
 
 - e2e step now starts a server before running tests
