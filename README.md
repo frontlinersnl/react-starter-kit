@@ -81,7 +81,7 @@ export const Navbar: FunctionComponent<{}> = () => {
 
 To add a value to the runtime config you have to take 2 steps:
 
-1. Add a type to the `RuntimeConfig` type in [src/infrastructure/config/RunTimeConfig.ts](./src/config/RunTimeConfig.ts)
+1. Add a type to the `RuntimeConfig` type in [src/infrastructure/config/RunTimeConfig.ts](./src/infrastructure/config/RunTimeConfig.ts)
 
    ```tsx
    type RunTimeConfig = {
