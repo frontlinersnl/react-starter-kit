@@ -2,7 +2,7 @@ import { DateTime } from "luxon";
 import { FunctionComponent } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Config } from "../config";
+import { Config } from "../../config";
 import "./Navbar.css";
 type Props = {};
 
@@ -13,7 +13,7 @@ export const Navbar: FunctionComponent<Props> = () => {
       <h1>{translate("navBar.intro")}</h1>
       <p>
         {/* trans can also be used to translate */}
-        <Trans i18nKey="navBar.version">App version:</Trans>
+        {Config.name} <Trans i18nKey="navBar.version">version:</Trans>
         {JSON.stringify(Config.version)}
       </p>
 

@@ -4,7 +4,7 @@
   },
   "navBar": {
     "intro": "Our fancy header with navigation.",
-    "version": "App version:",
+    "version": "version:",
     "currentDate": "Today's date: {{date, formattedDate}}"
   },
   "nav": {

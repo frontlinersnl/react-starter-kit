@@ -4,4 +4,5 @@
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom/extend-expect";
 
-(window as any).config = require("./../public/config");
+window.defaultConfig = require("./../public/config");
+window.configOverride = require("./../public/configOverride");
