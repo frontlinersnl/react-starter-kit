@@ -91,4 +91,4 @@ To add a value to the runtime config you have to take 2 steps:
    };
    ```
 
-2. Add a key (if required) to [public/config.js]
+2. Add a key (if required) to [public/config.js](./public/config.js)
