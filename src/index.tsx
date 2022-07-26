@@ -5,6 +5,7 @@ import App from "./App";
 import { store } from "./app/store";
 import "./index.css";
 import "./infrastructure/i18n/init";
+import { OidcProvider } from "./infrastructure/sso/OidcProvider";
 import { Loader } from "./infrastructure/wrappers/WithPageSuspense";
 import reportWebVitals from "./reportWebVitals";
 
@@ -14,9 +15,11 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Loader>
-        <App />
-      </Loader>
+      <OidcProvider>
+        <Loader>
+          <App />
+        </Loader>
+      </OidcProvider>
     </Provider>
   </React.StrictMode>,
 );

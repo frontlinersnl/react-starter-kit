@@ -68,5 +68,9 @@
       "",
       "export default ${1:${TM_FILENAME_BASE}}Slice.reducer;"
     ]
+  },
+  "react-i18next useTranslate hook": {
+    "prefix": ["useTranslation", "translate", "i18-trans"],
+    "body": ["const [translate] = useTranslation();"]
   }
 }

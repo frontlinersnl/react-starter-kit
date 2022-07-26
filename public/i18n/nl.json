@@ -10,7 +10,8 @@
   "nav": {
     "home": "home",
     "about": "over ons",
-    "counter": "teller"
+    "counter": "teller",
+    "tenders": "aanbestedingen (met auth)"
   },
   "about": {
     "title": "Over ons"

@@ -1,3 +1,4 @@
+import { useOidc, useOidcAccessToken } from "@axa-fr/react-oidc";
 import { DateTime } from "luxon";
 import { FunctionComponent } from "react";
 import { Trans, useTranslation } from "react-i18next";
@@ -9,6 +10,8 @@ type Props = {};
 
 export const Navbar: FunctionComponent<Props> = () => {
   const [translate, i18n] = useTranslation();
+  const { login, logout, isAuthenticated } = useOidc();
+  const { accessTokenPayload } = useOidcAccessToken();
   const { home, about, counter } = ROUTE_KEYS;
   return (
     <>
@@ -17,6 +20,13 @@ export const Navbar: FunctionComponent<Props> = () => {
         {/* trans can also be used to translate */}
         {Config.name} <Trans i18nKey="navBar.version">version:</Trans>
         {JSON.stringify(Config.version)}
+        <button
+          onClick={() => {
+            isAuthenticated ? logout() : login("/");
+          }}
+        >
+          {isAuthenticated ? `logout (${accessTokenPayload.email})` : "login"}
+        </button>
       </p>
 
       {/* This translation uses a formatter in the translation files  */}
@@ -30,6 +40,9 @@ export const Navbar: FunctionComponent<Props> = () => {
         </Link>
         <Link to={counter} data-testid="nav.counter">
           {translate("nav.counter")}
+        </Link>
+        <Link to="/tenders" data-testid="nav.tenders">
+          {translate("nav.tenders")}
         </Link>
         <button onClick={() => i18n.changeLanguage("en")}>en</button>
         <button onClick={() => i18n.changeLanguage("nl")}>nl</button>
