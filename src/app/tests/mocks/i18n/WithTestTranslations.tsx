@@ -2,7 +2,14 @@ import { FunctionComponent, ReactNode } from "react";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import i18n from "./i18n";
 
-type Props = { children?: ReactNode; keysOnly?: boolean };
+type Props = {
+  children?: ReactNode;
+  /**
+   * Whether to show the translation keys instead of translated text
+   * Can be useful to test languages that don't have full translations
+   */
+  keysOnly?: boolean;
+};
 
 const ProvidedComponent: FunctionComponent<Props> = ({ children, keysOnly }) => {
   const [_translate, i18nSettings] = useTranslation();

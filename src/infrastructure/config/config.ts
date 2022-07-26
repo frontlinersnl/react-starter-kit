@@ -1,4 +1,5 @@
 import deepmerge from "deepmerge";
+import { RunTimeConfig } from "./RunTimeConfig";
 
 /**
  * gets and merges both the regular config and the override config from the window
@@ -12,4 +13,4 @@ export const mergeConfigs = () => {
 
 mergeConfigs();
 
-export const Config = window.mergedConfig;
+export const Config: RunTimeConfig = window.mergedConfig;
