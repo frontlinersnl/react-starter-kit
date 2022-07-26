@@ -1,6 +1,6 @@
 {
   "name": "react-starter-kit",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A modern, create-react-app-based, starter kit for React projects",
   "keywords": [
     "react",
@@ -45,6 +45,7 @@
     "*.{ts,js,jsx,tsx,css,scss,json,md}": "prettier --write"
   },
   "dependencies": {
+    "@axa-fr/react-oidc": "^6.0.0-beta10",
     "@reduxjs/toolkit": "^1.8.3",
     "deepmerge": "^4.2.2",
     "i18next-http-backend": "^1.4.1",
@@ -95,6 +96,7 @@
     "file-loader": "^6.2.0",
     "fs-extra": "^10.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "http-proxy-middleware": "^2.0.6",
     "husky": "^8.0.1",
     "i18next": "^21.8.14",
     "i18next-browser-languagedetector": "^6.1.4",

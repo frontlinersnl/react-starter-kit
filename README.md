@@ -17,6 +17,7 @@ Includes:
 
 - [Getting started](#getting-started)
 - [Project structure](#project-structure)
+- ["Forking" outside of Github](#forking-outside-of-github)
 - [Configuration](#configuration)
   - [Using the `config.ts` file](#using-the-configts-file)
   - [adding values](#adding-values)
@@ -55,6 +56,17 @@ Only the important files are shown
 ├── README.md # keep this up to date
 └── tsconfig.json
 ```
+
+## "Forking" outside of Github
+
+To use this base in other git software (not Github) you will have to manually manage the upstream.
+Go into your existing repo and execute the following commands:
+
+1. `git remote add upstream <clone-url>`
+2. `git pull upstream master` # or other branchname
+3. `git push`
+
+Then, when you need to sync again you can repeat step 2 and 3
 
 ## Configuration
 

@@ -10,7 +10,8 @@
   "nav": {
     "home": "home",
     "about": "about",
-    "counter": "counter"
+    "counter": "counter",
+    "tenders": "tenders (with auth)"
   },
   "about": {
     "title": "About"
