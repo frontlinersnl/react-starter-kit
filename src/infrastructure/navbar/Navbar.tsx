@@ -3,18 +3,18 @@ import { DateTime } from "luxon";
 import { FunctionComponent } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import { ROUTE_KEYS } from "../../Routes";
 import { Config } from "../config";
-import "./Navbar.css";
-type Props = {};
+type Props = { className?: string };
 
-export const Navbar: FunctionComponent<Props> = () => {
+const Navbar: FunctionComponent<Props> = ({ className }) => {
   const [translate, i18n] = useTranslation();
   const { login, logout, isAuthenticated } = useOidc();
   const { accessTokenPayload } = useOidcAccessToken();
   const { home, about, counter } = ROUTE_KEYS;
   return (
-    <>
+    <div className={className}>
       <h1>{translate("navBar.intro")}</h1>
       <p>
         {/* trans can also be used to translate */}
@@ -48,6 +48,14 @@ export const Navbar: FunctionComponent<Props> = () => {
         <button onClick={() => i18n.changeLanguage("nl")}>nl</button>
         <hr />
       </nav>
-    </>
+    </div>
   );
 };
+
+const StyledNavBar = styled(Navbar)`
+  nav a {
+    padding-right: 10px;
+  }
+`;
+
+export { StyledNavBar as Navbar };

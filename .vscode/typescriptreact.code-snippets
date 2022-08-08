@@ -4,7 +4,7 @@
     "body": [
       "import { FunctionComponent } from \"react\";",
       "",
-      "type Props = {}",
+      "type Props = {};",
       "",
       "export const ${1:${TM_FILENAME_BASE}}: FunctionComponent<Props> = () => {",
       "  return <h1>${1:${TM_FILENAME_BASE}}</h1>;",
@@ -72,5 +72,23 @@
   "react-i18next useTranslate hook": {
     "prefix": ["useTranslation", "translate", "i18-trans"],
     "body": ["const [translate] = useTranslation();"]
+  },
+  "react-styled-component": {
+    "prefix": ["rsfc", "rsc", "react-styled-component"],
+    "body": [
+      "import { FunctionComponent } from \"react\";",
+      "import styled from \"styled-components\";",
+      "",
+      "type Props = { className?: string };",
+      "",
+      "const ${1:${TM_FILENAME_BASE}}: FunctionComponent<Props> = ({className}) => {",
+      "  return <h1 className={className}>${1:${TM_FILENAME_BASE}}</h1>;",
+      "};",
+      "",
+      "const Styled${1:${TM_FILENAME_BASE}} = styled(${1:${TM_FILENAME_BASE}})``;",
+      "",
+      "export { Styled${1:${TM_FILENAME_BASE}} as ${1:${TM_FILENAME_BASE}} };",
+      ""
+    ]
   }
 }
