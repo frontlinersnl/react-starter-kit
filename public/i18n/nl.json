@@ -11,7 +11,8 @@
     "home": "home",
     "about": "over ons",
     "counter": "teller",
-    "tenders": "aanbestedingen (met auth)"
+    "tenders": "aanbestedingen (met auth)",
+    "trucks": "trucks (contract api)"
   },
   "about": {
     "title": "Over ons"

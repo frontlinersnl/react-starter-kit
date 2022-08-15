@@ -1,6 +1,12 @@
 const defaultConfig = {
   version: "0.1.0",
   name: "React-starter-kit",
+  services: {
+    fake: {
+      root: "http://localhost:9600/fake",
+      trucks: "trucks",
+    },
+  },
   // oidc: {
   //   url: "private_url",
   //   realm: "inforit",
