@@ -12,7 +12,7 @@ const Navbar: FunctionComponent<Props> = ({ className }) => {
   const [translate, i18n] = useTranslation();
   const { login, logout, isAuthenticated } = useOidc();
   const { accessTokenPayload } = useOidcAccessToken();
-  const { home, about, counter } = ROUTE_KEYS;
+  const { home, about, counter, tenders, trucks } = ROUTE_KEYS;
   return (
     <div className={className}>
       <h1>{translate("navBar.intro")}</h1>
@@ -41,8 +41,11 @@ const Navbar: FunctionComponent<Props> = ({ className }) => {
         <Link to={counter} data-testid="nav.counter">
           {translate("nav.counter")}
         </Link>
-        <Link to="/tenders" data-testid="nav.tenders">
+        <Link to={tenders} data-testid="nav.tenders">
           {translate("nav.tenders")}
+        </Link>
+        <Link to={trucks} data-testid="nav.trucks">
+          {translate("nav.trucks")}
         </Link>
         <button onClick={() => i18n.changeLanguage("en")}>en</button>
         <button onClick={() => i18n.changeLanguage("nl")}>nl</button>

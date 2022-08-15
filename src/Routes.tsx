@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { AboutContainer } from "./features/about/About";
 import { CounterContainer } from "./features/examples/counter/Counter";
 import { Tenders } from "./features/examples/tenders/Tenders";
+import { Trucks } from "./features/examples/trucks/Trucks";
 import { HomeContainer } from "./features/home/Home";
 type Props = {};
 
@@ -12,10 +13,11 @@ export const ROUTE_KEYS = {
   about: "about",
   counter: "counter",
   tenders: "tenders",
+  trucks: "trucks",
 };
 
 export const AppRoutes: FunctionComponent<Props> = () => {
-  const { home, about, counter, tenders } = ROUTE_KEYS;
+  const { home, about, counter, tenders, trucks } = ROUTE_KEYS;
   return (
     <Routes>
       <Route path={home} element={<HomeContainer />} />
@@ -30,6 +32,7 @@ export const AppRoutes: FunctionComponent<Props> = () => {
           </OidcSecure>
         }
       />
+      <Route path={trucks} element={<Trucks />} />
       {/* <Route index element={<Home />} /> */}
       {/* <Route path="teams" element={<Teams />}>
       <Route path=":teamId" element={<Team />} />

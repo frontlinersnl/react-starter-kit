@@ -11,7 +11,8 @@
     "home": "home",
     "about": "about",
     "counter": "counter",
-    "tenders": "tenders (with auth)"
+    "tenders": "tenders (with auth)",
+    "trucks": "trucks (contract api)"
   },
   "about": {
     "title": "About"

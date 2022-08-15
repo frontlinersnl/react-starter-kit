@@ -6,6 +6,9 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
+  env: {
+    appBaseUrl: "http://localhost:3000",
+  },
   video: false,
   reporter: "mocha-junit-reporter",
   reporterOptions: {
