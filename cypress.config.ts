@@ -13,4 +13,13 @@ export default defineConfig({
     mochaFile: "dist-tests/test-results/cypress/[hash].xml",
     outputs: true,
   },
+  env: {
+    oidcUrl: "https://sso.mastermindzh.tech/realms/public-tests/protocol/openid-connect/token",
+    oidcClientId: "demo",
+    oidcClientSecret: "lhlPHFUd3fC1Ky0Uwyb2ssC0XiAFeGGF",
+    oidcGrantType: "client_credentials",
+    oidcScope: "openid profile email",
+    oidcToken: "",
+    oidcCallbackUrl: "http://localhost:3000/authentication/callback",
+  },
 });
