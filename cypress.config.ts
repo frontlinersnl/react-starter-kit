@@ -6,14 +6,21 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
-  env: {
-    appBaseUrl: "http://localhost:3000",
-  },
   video: false,
   reporter: "mocha-junit-reporter",
   reporterOptions: {
     testsuitesTitle: true,
     mochaFile: "dist-tests/test-results/cypress/[hash].xml",
     outputs: true,
+  },
+  env: {
+    appBaseUrl: "http://localhost:3000",
+    oidcUrl: "https://sso.mastermindzh.tech/realms/public-tests/protocol/openid-connect/token",
+    oidcClientId: "demo",
+    oidcClientSecret: "lhlPHFUd3fC1Ky0Uwyb2ssC0XiAFeGGF",
+    oidcGrantType: "client_credentials",
+    oidcScope: "openid profile email",
+    oidcToken: "",
+    oidcCallbackUrl: "http://localhost:3000/authentication/callback",
   },
 });
