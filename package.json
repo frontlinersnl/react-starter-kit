@@ -48,7 +48,7 @@
     "*.{ts,js,jsx,tsx,css,scss,json,md}": "prettier --write"
   },
   "dependencies": {
-    "@axa-fr/react-oidc": "^6.0.0-beta10",
+    "@axa-fr/react-oidc": "^6.19.2",
     "@reduxjs/toolkit": "^1.8.3",
     "deepmerge": "^4.2.2",
     "i18next-http-backend": "^1.4.1",
